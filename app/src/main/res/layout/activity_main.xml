@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/vpTop"/>
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/vpBottom"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/topPlusImageView"
+        android:layout_width="@dimen/_30dp"
+        android:layout_height="@dimen/_30dp"
+        android:src="@drawable/ic_plus"
+        android:layout_margin="@dimen/_20dp"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageView
+        android:id="@+id/bottomPlusImageView"
+        android:layout_width="@dimen/_30dp"
+        android:layout_height="@dimen/_30dp"
+        android:src="@drawable/ic_plus"
+        android:layout_margin="@dimen/_20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"/>
+
+    <com.like.LikeButton
+            android:id="@+id/likeButton"
+        android:layout_width="@dimen/_40dp"
+        android:layout_height="@dimen/_40dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_20dp"
+        app:icon_size="@dimen/_40dp"
+        app:icon_type="heart"
+
+        app:like_drawable="@drawable/heart_filled"
+        app:unlike_drawable="@drawable/heart_hollow" />
+
+
+    <ImageView
+        android:id="@+id/suffleImageView"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_50dp"
+        android:src="@drawable/ic_shuffle"
+        android:clickable="true"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
